@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8"/>
+<title>login</title>
+</head>
+<body>
+	<!-- Spring Security自带过滤器拦截并验证用户身份，身份认证失败则重定向到/login?error，并在页面中展示相关信息 -->
+	<div th:if="${param.error}">
+            用户名或密码错
+    </div>
+    <!-- 用户注销登录则访问/login?logout请求，注销成功后在页面展示相关信息 -->
+    <div th:if="${param.logout}">
+        您已注销成功
+    </div>
+
+	<form th:action="@{/login}" method="post">
+        <div><label> 用户名 : <input type="text" name="username"/> </label></div>
+        <div><label> 密  码 : <input type="password" name="password"/> </label></div>
+        <div><input type="submit" value="登录"/></div>
+    </form>
+</body>
+</html>

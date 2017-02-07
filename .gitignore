@@ -1,0 +1,3 @@
+*.prefs
+spring_boot_rabbitmq/.classpath
+*.project

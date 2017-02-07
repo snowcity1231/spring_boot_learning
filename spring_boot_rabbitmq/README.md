@@ -7,8 +7,8 @@ linux中安装RabbitMQ，参考https://github.com/judasn/Linux-Tutorial
 	RabbitMQ 官网提供 Erlang 安装包，下载地址：http://www.rabbitmq.com/releases/erlang/
 
 2、安装RabbitMQ
-	通过官方下载页面https://www.rabbitmq.com/download.html下载linux版本
-	安装rpm -i rabbitmq-server-3.6.6-1.el7.noarch.rpm
+	通过官方下载页面https://www.rabbitmq.com/download.html下载linux版本  
+	安装rpm -i rabbitmq-server-3.6.6-1.el7.noarch.rpm  
 	启动服务：
 		先看下自己的主机名：hostname，我的主机名是：bogon
 		先修改一下 host 文件：vim /etc/hosts，添加一行：127.0.0.1 bogon（必须这样做）

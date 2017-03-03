@@ -51,7 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
-				.antMatchers("/", "/log").permitAll()		//指定不需要认证就可以访问的IP
+				.antMatchers("/", "/log", "/redis/*").permitAll()		//指定不需要认证就可以访问的网页
 				.anyRequest().authenticated()
 				.and()
 			.formLogin()
